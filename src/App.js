@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import BarChartComponent from "./components/BarChartComponent";
+import { data } from "./mock/mockData";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BarChartComponent
+        data={data["result"]["data"]}
+        xLabel=""
+        yLabel=""
+        xDataKey="itemKey"
+        yDataKey="Quantity"
+        chartHeader="מוצרים לפי כמות"
+      />
     </div>
   );
 }
